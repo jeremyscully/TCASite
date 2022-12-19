@@ -71,32 +71,16 @@
   <script type="text/javascript" src="./abilities/abilityDirective.js"></script>
   <!--/dependencies-->
   <!--Firebase stuff-->
-  <script type="text/javascript" src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angularFire/2.3.0/angularfire.js"></script>
-  <script>
-    var config = {
-      apiKey: "AIzaSyDjNrDYn_77BLHfDFu3dth62GQTsi5vdZw",
-      authDomain: "vtmsite-64232.firebaseapp.com",
-      databaseURL: "https://vtmsite-64232.firebaseio.com",
-      projectId: "vtmsite-64232",
-      storageBucket: "vtmsite-64232.appspot.com",
-      messagingSenderId: "181998793987"
-    };
-
-    firebase.initializeApp(config);
-    angular.element(function(){
-      setTimeout(function(){
-        angular.bootstrap(document, ['site']);
-      }, 400);
-    });
-
-    $(window).scroll(function() {
-  if ($(document).scrollTop() > 50) {
-    $('nav').addClass('shrink');
-  } else {
-    $('nav').removeClass('shrink');
-  }
-});
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBYjrYeUfiqgy0iZAvXAMGdPR3BcepCz9w",
+  authDomain: "tcasite-73e12.firebaseapp.com",
+  projectId: "tcasite-73e12",
+  storageBucket: "tcasite-73e12.appspot.com",
+  messagingSenderId: "515571336945",
+  appId: "1:515571336945:web:c831c1f9d548f624940b50",
+  measurementId: "G-L9YCXRT6KH"
+};
   </script>
   <!--/Firebase stuff-->
 </head>

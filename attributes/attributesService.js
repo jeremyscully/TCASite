@@ -13,7 +13,7 @@ app.service('AttributesService', ['UglyService', 'CharCreatorService',
   this.resetAttributes = resetAttributes;
   this.resetPriorities = resetPriorities;
   this.attributePriorities = ["Primary", "Secondary", "Tertiary"];
-  this.attributesPage = "./attributes/attributes3.html";
+  this.attributesPage = "./attributes/attributes.html";
   this.attributePtsTotal = 15;
   this.primaryPts = 7;
   this.secondaryPts = 5;

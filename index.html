@@ -71,35 +71,29 @@
   <script type="text/javascript" src="./abilities/abilityDirective.js"></script>
   <!--/dependencies-->
   <!--Firebase stuff-->
-  <script type="text/javascript" src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angularFire/2.3.0/angularfire.js"></script>
-  <script>
-    var config = {
-      apiKey: "AIzaSyBYjrYeUfiqgy0iZAvXAMGdPR3BcepCz9w",
-      authDomain: "tcasite-73e12.firebaseapp.com",
-      databaseURL: "https://vtmsite-64232.firebaseio.com",
-      projectId: "tcasite-73e12",
-      storageBucket: "tcasite-73e12.appspot.com",
-      messagingSenderId: "515571336945",
-      appId: "1:515571336945:web:c831c1f9d548f624940b50",
-      measurementId: "G-L9YCXRT6KH"
-    };
+  <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
-    firebase.initializeApp(config);
-    angular.element(function(){
-      setTimeout(function(){
-        angular.bootstrap(document, ['site']);
-      }, 400);
-    });
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBYjrYeUfiqgy0iZAvXAMGdPR3BcepCz9w",
+    authDomain: "tcasite-73e12.firebaseapp.com",
+    projectId: "tcasite-73e12",
+    storageBucket: "tcasite-73e12.appspot.com",
+    messagingSenderId: "515571336945",
+    appId: "1:515571336945:web:c831c1f9d548f624940b50",
+    measurementId: "G-L9YCXRT6KH"
+  };
 
-    $(window).scroll(function() {
-  if ($(document).scrollTop() > 50) {
-    $('nav').addClass('shrink');
-  } else {
-    $('nav').removeClass('shrink');
-  }
-});
-  </script>
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
   <!--/Firebase stuff-->
 </head>
 <body>

@@ -10,16 +10,18 @@
   <meta name="theme-color" content="#ffffff">
   <!--/icon stuff-->
   <!--dependencies-->
-  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
   <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/ng-table/1.0.0/ng-table.min.css" />
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-toaster/1.1.0/toaster.min.css" />
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"/></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"/></script>
+  <script type="text/javascript" src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.min.js"/></script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular-route.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ng-table/1.0.0/ng-table.js"></script>
-  <script type="text/javascript" src="./angular-translate.min.js"></script>
   <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.30/pdfmake.min.js"></script> -->
   <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.30/vfs_fonts.js"></script> -->
   <script type="text/javascript" src="https://code.angularjs.org/1.2.0/angular-animate.min.js"></script>
@@ -27,10 +29,8 @@
   <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/1.9.638/pdf.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/1.9.638/pdf.worker.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/1.9.638/pdf_viewer.js"></script> -->
-  <!-- <script type="text/javascript" src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script> -->
   <script type="text/javascript" src="./jspdf.min.js"></script>
-  <script type="text/javascript" src="app.js"></script>
-  <script type="text/javascript" src="./acroform.js"></script>
+  <script type="text/javascript" src="./app.js"></script>
   <script type="text/javascript" src="./clans/uglyService.js"></script>
   <script type="text/javascript" src="./termIndex/termIndexService.js"></script>
   <script type="text/javascript" src="./home/homeController.js"></script>
@@ -68,53 +68,103 @@
   <script type="text/javascript" src="./meritFlaw/meritFlawController.js"></script>
   <script type="text/javascript" src="./meritFlaw/meritFlawService.js"></script>
   <script type="text/javascript" src="./glossary/glossaryController.js"></script>
-  <script type="text/javascript" src="./upload/uploadController.js"></script>
-  <script type="text/javascript" src="./upload/uploadService.js"></script>
-  <script type="text/javascript" src="./upload/uploadDirective.js"></script>
+  <script type="text/javascript" src="./abilities/abilityDirective.js"></script>
   <!--/dependencies-->
   <!--Firebase stuff-->
-  <script type="text/javascript" src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angularFire/2.3.0/angularfire.js"></script>
-  <script>
-    var config = {
-      apiKey: "AIzaSyDjNrDYn_77BLHfDFu3dth62GQTsi5vdZw",
-      authDomain: "vtmsite-64232.firebaseapp.com",
-      databaseURL: "https://vtmsite-64232.firebaseio.com",
-      projectId: "vtmsite-64232",
-      storageBucket: "vtmsite-64232.appspot.com",
-      messagingSenderId: "181998793987"
-    };
+  <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
-    firebase.initializeApp(config);
-    angular.element(function(){
-      setTimeout(function(){
-        angular.bootstrap(document, ['site']);
-      }, 400);
-    });
-  </script>
-  <!--/Firebase stuff-->
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBYjrYeUfiqgy0iZAvXAMGdPR3BcepCz9w",
+    authDomain: "tcasite-73e12.firebaseapp.com",
+    projectId: "tcasite-73e12",
+    storageBucket: "tcasite-73e12.appspot.com",
+    messagingSenderId: "515571336945",
+    appId: "1:515571336945:web:c831c1f9d548f624940b50",
+    measurementId: "G-L9YCXRT6KH"
+  };
 
-  <!--Cookie Policy stuff-->
-  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
-<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
-<script>
-window.addEventListener("load", function(){
-window.cookieconsent.initialise({
-  "palette": {
-    "popup": {
-      "background": "#000"
-    },
-    "button": {
-      "background": "#f1d600"
-    }
-  },
-  "theme": "classic"
-})});
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
 </script>
-  <!--/END Cookie Policy stuff-->
+  <!--/Firebase stuff-->
 </head>
 <body>
-  <div class="navbar-sm">
+  <nav class="navbar navbar-light navbar-expand-md" ng-controller="NavController as nav">
+    <!-- <div class="container"> -->
+        <button type="button" class="navbar-toggler" data-toggle="collapse"
+          data-target="#collapsenav">
+          <img class="img-fluid" style="width:10px;" src="v20ankh.png"/>
+        </button>
+        <a class="navbar-brand">
+          <img class="img-fluid d-none d-md-block" style="width:10px;" src="v20ankh.png"/>
+        </a>
+      <div class="collapse navbar-collapse" id="collapsenav">
+        <ul class="navbar-nav">
+          <li class="nav-item" ng-class="{active: nav.isActive('/home')}">
+            <a class="nav-link" href="#">Home</a>
+          </li class="nav-item">
+          <li ng-class="{active: nav.isActive('/creator')}">
+            <a class="nav-link" href="#!/creator">Creator</a>
+          </li>
+          <!-- <li ng-class="{active: nav.isActive('/glossary')}">
+            <a href="#!/glossary">Glossary</a> -->
+          </li>
+          <li id="DDList" class="dropdown" ng-controller="LoginController as loginCtrl">
+           <a class="nav-link" ng-hide="!loginCtrl.loggedIn" href="" ng-click="loginCtrl.logout()"><b>Logout</b></a>
+           <a class="nav-link" ng-hide="loginCtrl.loggedIn" href="" class="dropdown-toggle" data-toggle="dropdown">
+             <b>Login</b>
+             <span class="caret"></span>
+           </a>
+           <ul id="login-dp" class="dropdown-menu" ng-hide="loginCtrl.loggedIn">
+             <li>
+               <div class="row">
+                 <div class="col-md-12">
+                   <form class="form" role="form" method="post" id="login-nav">
+                     <div class="form-group">
+                       <label class="sr-only" for="emailDD">Email: </label>
+                       <input type="email" class="form-control" id="emailDD"
+                              ng-model="loginCtrl.email" placeholder="Email Address" required/>
+                     </div>
+                     <div class="form-group">
+                       <label class="sr-only" for="passwordDD">Password: </label>
+                       <input type="password" class="form-control" id="passwordDD"
+                              ng-model="loginCtrl.password" placeholder="Password" required />
+                       <div class="help-block text-right">
+                         <a ng-click="loginCtrl.forgotPW(loginCtrl.email)">Forgot Password?</a>
+                       </div>
+                     </div>
+                     <div class="form-group">
+                       <button class="btn btn-primary btn-block"
+                               ng-click="loginCtrl.login()">Sign in</button>
+                     </div>
+                     <div class="form-group">
+                       <button class="btn btn-primary btn-block"
+                               ng-click="loginCtrl.register()">Register</button>
+                     </div>
+                     <!-- <div class="checkbox">
+                       <label>
+                         <input ng-model="loginCtrl.noCloseLogout" type="checkbox" />keep me logged in
+                       </label>
+                     </div> -->
+                   </form>
+                 </div>
+               </div>
+             </li>
+           </ul>
+         </li>
+        </ul>
+      </div>
+    <!-- </div> -->
+  </nav>
+   <!-- <div class="navbar-sm">
     <div class="navbar-primary">
       <nav class="navbar-default navbar-fixed-top" role="navigation" ng-controller="NavController as nav">
         <div class="container-fluid">
@@ -125,18 +175,11 @@ window.cookieconsent.initialise({
             </li>
             <li ng-class="{active: nav.isActive('/creator')}">
               <a href="#!/creator">Character Creator</a>
-            </li>
-            <li>
-              <a href="#!/freecreator">Free Creator</a>
-            </li>
-            <li>
-			<a href="mailto:sharky700@gmail.com" target="_blank">Submit issue/suggestion</a>
-              <!--<a href="https://gitreports.com/issue/DrSharky/VTMsite" target="_blank">Submit issue/suggestion</a>-->
-            </li>
+            </li> -->
             <!--<li ng-class="{active: nav.isActive('/glossary')}">
               <a href="#!/glossary">Glossary</a>
             </li> -->
-            <li id="DDList" class="dropdown" ng-controller="LoginController as loginCtrl">
+             <!-- <li id="DDList" class="dropdown" ng-controller="LoginController as loginCtrl">
               <a ng-hide="!loginCtrl.loggedIn" href="" ng-click="loginCtrl.logout()"><b>Logout</b></a>
               <a ng-hide="loginCtrl.loggedIn" href="" class="dropdown-toggle" data-toggle="dropdown">
                 <b>Login</b>
@@ -167,55 +210,65 @@ window.cookieconsent.initialise({
                         <div class="form-group">
                           <button class="btn btn-primary btn-block"
                                   ng-click="loginCtrl.register()">Register</button>
-                        </div>
+                        </div> -->
                         <!-- <div class="checkbox">
                           <label>
                             <input ng-model="loginCtrl.noCloseLogout" type="checkbox" />keep me logged in
                           </label>
                         </div> -->
-                      </form>
+                       <!-- </form>
                     </div>
                   </div>
                 </li>
               </ul>
-            </li>
-            <li style="background-color:black;">
-              <a style="color:white;" href="https://blacklivesmatters.carrd.co/" target=_"blank">BLM</a>
-            </li>
-          </ul>
+            </li> -->
+          <!-- </ul>
         </div>
       </nav>
     </div>
-  </div>
+  </div> -->
   <br />
   <div class="container-fluid">
-    <div class="row" style="margin-left: 100px; margin-right: 100px;">
-      <div class="col-lg-12">
+    <!-- <div class="container-fluid"> -->
+    <!-- <div class="row"> -->
         <div ng-controller="TermIndexController as tindexCtrl">
           <div ng-view></div>
         </div>
-      </div>
-    </div>
+    <!-- </div> -->
+    <!-- </div> -->
   </div>
 </body>
 </html>
 
 <style>
-  body{
+  /* body{
     padding-top: 10px;
     padding-bottom:20px;
-  }
+  } */
   #title-logo{
     height: 32px;
     margin-left: -15px;
     padding-top:5px;
   }
-.navbar-primary .navbar-default .nav li > a .caret, .tnav .navbar .nav li > a:hover .caret {border-top-color: #fff;border-bottom-color: #fff;}
+  .active{
+    background-color: rgba(225,225,225);
+  }
+   nav {
+  .navbar-brand {font-size: 30px;}
+	.navbar-toggle {margin: 13px 15px 13px 0;}
+	a {
+		font-size: 18px;
+		padding-bottom: 20px !important;
+		padding-top: 20px !important;
+    transition: all 0.3s ease;
+	}
+}
+/* .navbar-primary .navbar-default .nav li > a .caret, .tnav .navbar .nav li > a:hover .caret {border-top-color: #fff;border-bottom-color: #fff;}
 .navbar-primary .navbar-default .nav > li.dropdown.open.active > a:hover .caret, .tnav .navbar .nav > li.dropdown.open > a .caret {border-top-color: #fff;}
 .navbar-primary .navbar-default .nav.pull-right {margin-left: 10px; margin-right: 0;}
 .navbar-sm .navbar-primary .navbar-default { min-height:40px; height: 40px; }
 .navbar-sm .navbar-primary .navbar-default .navbar-brand{ padding: 0px 12px;font-size: 16px;line-height: 40px; }
-.navbar-sm .navbar-primary .navbar-default .navbar-nav > li > a {  padding-top: 0px; padding-bottom: 0px; line-height: 40px; }
+.navbar-sm .navbar-primary .navbar-default .navbar-nav > li > a {  padding-top: 0px; padding-bottom: 0px; line-height: 40px; } */
 #login-dp{
     min-width: 250px;
     padding: 14px 14px 0;
@@ -243,5 +296,25 @@ window.cookieconsent.initialise({
         background-color: inherit;
         border-top:0 none;
     }
+    /* body{
+      padding-top: 100px;
+    } */
+}
+
+@font-face {
+    font-family: 'title_font';
+    src: url('./fonts/perctext-webfont.woff2') format('woff2'),
+         url('./fonts/perctext-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'rale_font';
+    src: url('./fonts/raleway-regular-webfont.woff2') format('woff2'),
+         url('./fonts/raleway-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
 </style>

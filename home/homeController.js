@@ -1,6 +1,6 @@
 var app = angular.module("site");
 
  app.controller("HomeController", function(){
-this.welcomeMessage = "Welcome to my V:TM page!";
-this.vtmLogo = "./vtmlogo.png";
+this.welcomeMessage = "Welcome to my Trinity Continuum Aberrant page!";
+this.vtmLogo = "./tcalogo.png";
 });
